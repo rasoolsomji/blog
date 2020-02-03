@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>https://sambriggs.dev/about/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://sambriggs.dev/categories/</loc>
   </url>
   

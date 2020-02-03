@@ -20,5 +20,16 @@
       <description></description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://sambriggs.dev/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sambriggs.dev/about/</guid>
+      <description>A mostly-technical blog that records some of the things I find out as I tinker with my software projects.
+To be honest, I&amp;rsquo;d be happy if all it achieves is saving one person hours of pain having stumbled here chasing an error message via google.
+(Hi 👋)</description>
+    </item>
+    
   </channel>
 </rss>

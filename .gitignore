@@ -1,2 +1,4 @@
 # Ignore build output
 public/
+# Ignore built resources
+resources/_gen

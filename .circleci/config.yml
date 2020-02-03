@@ -1,0 +1,79 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
+version: 2.1
+
+jobs:
+  # Job to build the site
+  build:
+    docker:
+      - image: cibuilds/hugo:latest
+    working_directory: ~/hugo
+    steps:
+      - run:
+          name: Set dynamic environment variables
+          command: |
+            if [ "$CIRCLE_BRANCH" = "master" ]; then
+              'export HUGO_ENV=production' >> $BASH_ENV
+            else
+              'export HUGO_ENV=development' >> $BASH_ENV
+            fi;
+            source $BASH_ENV
+      - run:
+          name: Install Git
+          command: apk update && apk add git
+      # checkout the repository
+      - checkout
+      - run:
+          name: Install git submodules
+          command: git submodule sync && git submodule update --init
+      - run:
+          name: Build with Hugo
+          command: hugo -v -D
+      - persist_to_workspace:
+          root: .
+          paths:
+            - public
+  # Job to test the site
+  test:
+    docker:
+      - image: cibuilds/hugo:latest
+    steps:
+      - attach_workspace:
+          at: _build
+      - run:
+          name: test HTML files
+          command: |
+            htmlproofer _build --allow-hash-href --check-html \
+            --empty-alt-ignore --disable-external
+  # Job to deploy to Github pages
+  deploy:
+    docker:
+      - image: node:8.10.0  # We need this for the javascript tool
+    steps:
+      - checkout
+      - attach_workspace:
+          at: _build
+      - run:
+          name: Install and configure dependencies
+          command: npm install -g --silent gh-pages@2.0.1
+      - run:
+          name: Configure git
+          command: |
+            git config user.email "ci-build@sambriggs.dev"
+            git config user.name "ci-build"
+      - run:
+          name: Deploy to gh-pages branch
+          command: gh-pages --dist _build/
+
+workflows:
+  main:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - deploy:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build

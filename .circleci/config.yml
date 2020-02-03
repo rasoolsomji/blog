@@ -30,10 +30,12 @@ jobs:
       - run:
           name: Build with Hugo
           command: hugo -v -D
+      - run:
+          name: Show build output
+          command: ls -lah ./public
       - persist_to_workspace:
           root: .
-          paths:
-            - public
+          paths: public
   # Job to test the site
   test:
     docker:

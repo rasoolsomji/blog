@@ -1,0 +1,90 @@
+version: 2
+
+jobs:
+  # Job to build the site
+  build:
+    docker:
+      - image: cibuilds/hugo:latest
+    working_directory: ~/hugo
+    steps:
+      - run:
+          name: Set dynamic environment variables
+          command: |
+            if [ "$CIRCLE_BRANCH" = "master" ]; then
+              echo 'export HUGO_ENV=production' >> $BASH_ENV
+            else
+              echo 'export HUGO_ENV=development' >> $BASH_ENV
+            fi;
+            source $BASH_ENV
+      # checkout the repository
+      - checkout
+      - run:
+          name: Install git submodules
+          command: git submodule sync && git submodule update --init
+      - run:
+          name: Install NPM
+          command: sudo apt-get update && sudo apt-get install -y npm
+      - run:
+          name: Install node dependencies
+          command: sudo npm install -g postcss-cli autoprefixer
+      - run:
+          name: Build with Hugo
+          command: hugo -v -D
+      - run:
+          name: Show build output
+          command: ls -lah ./public
+      - persist_to_workspace:
+          root: .
+          paths: public
+  # Job to test the site
+  test:
+    docker:
+      - image: cibuilds/hugo:latest
+    steps:
+      - attach_workspace:
+          at: _build
+      - run:
+          name: test HTML files
+          command: |
+            htmlproofer _build --allow-hash-href --check-html \
+            --empty-alt-ignore --disable-external
+  # Job to deploy to Github pages
+  deploy:
+    docker:
+      - image: node:8.10.0  # We need this for the javascript tool
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Install and configure dependencies
+          command: npm install -g --silent gh-pages@2.0.1
+      - run:
+          name: Configure git
+          command: |
+            git config user.email "ci-build@sambriggs.dev"
+            git config user.name "ci-build"
+      - add_ssh_keys:
+          fingerprints:
+            - "90:0b:12:c9:19:f0:29:a8:61:f5:39:8b:5d:d1:51:94"
+      - run:
+          name: Add CNAME record
+          command: echo 'sambriggs.dev' >> ./public/CNAME
+      - run:
+          name: Deploy to gh-pages branch
+          command: gh-pages --dist ./public
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - deploy:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build

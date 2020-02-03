@@ -12,9 +12,9 @@ jobs:
           name: Set dynamic environment variables
           command: |
             if [ "$CIRCLE_BRANCH" = "master" ]; then
-              'export HUGO_ENV=production' >> $BASH_ENV
+              echo 'export HUGO_ENV=production' >> $BASH_ENV
             else
-              'export HUGO_ENV=development' >> $BASH_ENV
+              echo 'export HUGO_ENV=development' >> $BASH_ENV
             fi;
             source $BASH_ENV
       - run:

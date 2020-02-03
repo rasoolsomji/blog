@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My New Hugo Site</title>
-    <link>http://example.org/tags/</link>
+    <link>https://sambriggs.dev/tags/</link>
     <description>Recent content in Tags on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Feb 2020 14:59:18 +0000</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sambriggs.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>blog</title>
-      <link>http://example.org/tags/blog/</link>
+      <link>https://sambriggs.dev/tags/blog/</link>
       <pubDate>Mon, 03 Feb 2020 14:59:18 +0000</pubDate>
       
-      <guid>http://example.org/tags/blog/</guid>
+      <guid>https://sambriggs.dev/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>story</title>
-      <link>http://example.org/tags/story/</link>
+      <link>https://sambriggs.dev/tags/story/</link>
       <pubDate>Mon, 03 Feb 2020 14:59:18 +0000</pubDate>
       
-      <guid>http://example.org/tags/story/</guid>
+      <guid>https://sambriggs.dev/tags/story/</guid>
       <description></description>
     </item>
     

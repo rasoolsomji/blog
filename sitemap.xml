@@ -3,37 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/tags/blog/</loc>
+    <loc>https://sambriggs.dev/tags/blog/</loc>
     <lastmod>2020-02-03T14:59:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/my-first-post/</loc>
+    <loc>https://sambriggs.dev/posts/my-first-post/</loc>
     <lastmod>2020-02-03T14:59:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://sambriggs.dev/</loc>
     <lastmod>2020-02-03T14:59:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://sambriggs.dev/posts/</loc>
     <lastmod>2020-02-03T14:59:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/story/</loc>
+    <loc>https://sambriggs.dev/tags/story/</loc>
     <lastmod>2020-02-03T14:59:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://sambriggs.dev/tags/</loc>
     <lastmod>2020-02-03T14:59:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://sambriggs.dev/categories/</loc>
   </url>
   
 </urlset>

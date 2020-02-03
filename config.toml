@@ -8,9 +8,21 @@ googleAnalytics = "UA-157531859-1"
 
 [params]
     dateform = "2 Jan 2006"
-    homepage = "Home" # What to call the home page link
+    homepage = "home" # What to call the home page link
     footerText = "The personal blog of Sam Briggs, just another nerd."
 
     # Metadata for Open Graph and Twitter
     description = "The personal blog of Sam Briggs, just another nerd."
     title = "Sam Briggs"
+
+[[params.mainMenu]]
+    link = "/about"
+    text = "about"
+
+[[params.mainMenu]]
+    link = "/posts"
+    text = "posts"
+
+[[params.mainMenu]]
+    link = "https://github.com/briggySmalls"
+    text = "github"

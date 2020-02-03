@@ -1,4 +1,4 @@
 baseURL = "https://sambriggs.dev/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+languageCode = "en-uk"
+title = "Sam Briggs"
 theme = "hugo-theme-sam"

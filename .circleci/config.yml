@@ -62,6 +62,9 @@ jobs:
           command: |
             git config user.email "ci-build@sambriggs.dev"
             git config user.name "ci-build"
+      - add_ssh_keys:
+          fingerprints:
+            - "90:0b:12:c9:19:f0:29:a8:61:f5:39:8b:5d:d1:51:94"
       - run:
           name: Deploy to gh-pages branch
           command: gh-pages --dist _build/

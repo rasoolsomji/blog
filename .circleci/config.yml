@@ -34,8 +34,8 @@ jobs:
           name: Install git submodules
           command: git submodule sync && git submodule update --init
       - run:
-          name: Install NPM
-          command: sudo apt-get update && sudo apt-get install -y npm
+          name: Install apt packages
+          command: sudo apt-get update && sudo apt-get install -y npm tree
       - run:
           name: Install node dependencies
           command: sudo npm install -g postcss-cli autoprefixer
@@ -44,7 +44,7 @@ jobs:
           command: hugo -v -D
       - run:
           name: Show build output
-          command: ls -lah ./public
+          command: tree ./public
       - persist_to_workspace:
           root: .
           paths: public
@@ -55,12 +55,6 @@ jobs:
     steps:
       - attach_workspace:
           at: _build
-      - run:
-          name: Install tree
-          command: sudo apt-get update && sudo apt-get install tree
-      - run:
-          name: Run tree
-          command: tree _build
       - run:
           name: test HTML files
           command: htmlproofer _build --allow-hash-href --check-html

@@ -72,7 +72,7 @@ jobs:
           command: echo 'sambriggs.dev' >> ./public/CNAME
       - run:
           name: Deploy to gh-pages branch
-          command: gh-pages --dist ./public
+          command: gh-pages --dist ./public --message "[ci skip] Deploy updates"
 
 workflows:
   version: 2

@@ -1,5 +1,5 @@
 ---
-title: "Building this site"
+title: "The birth of a blog"
 date: 2020-02-03T14:59:18Z
 showDate: true
 draft: false
@@ -17,16 +17,16 @@ Because I just want to write some text that people can read, and I can execute a
 
 > Perfect is the enemy of good
 
-Being the kind of person who often lets perfect get the better of me, I didn't want to get stuck at step one _this_ time.
+Knowing I'm the kind of person who often lets perfect get the better of me, I didn't want to get stuck at step one _this_ time.
 
 I took the top three static site frameworks from [stackshare](https://stackshare.io/static-site-generators): Jekyll, Gatsby, Hugo.
 And whittled them down through opinionated first-impressions and prejudices:
 
-1. [Gatsby](https://www.gatsbyjs.org/) is react-based and seemed to be peddling [JAMstack](https://jamstack.org/) 'webapp',
-which sounded a lot like 'javascript bloat', for a blog use-case.
+1. [Gatsby](https://www.gatsbyjs.org/) is react-based and seemed to be peddling [JAMstack](https://jamstack.org/) 'webapp'.
+This sounded a lot like 'javascript bloat' for a blog use-case.
 2. I'd used [Jekyll](https://jekyllrb.com/) once before, and for my chosen theme I had to commit some file dump and modify the theme files directly.
-Maybe gem-based themes are more common, but my experience scarred me. No theme updates?
-3. [Hugo](https://gohugo.io/) is Go 🥰
+Maybe this isn't always the case, but my experience scarred me. No theme updates?
+3. [Hugo](https://gohugo.io/) is like Jekyll, but _new_, and Go 🥰
 
 # Setup
 
@@ -53,14 +53,17 @@ Transformation failed: POSTCSS: failed to transform “css/main.css” (text/css
 ```
 
 It turns out my chosen theme ([Call me Sam](https://themes.gohugo.io/hugo-theme-sam/) - what a narcissist!) depended on the PostCSS 'Hugo Pipe',
-which meant I needed some npm packages installed globally. In fact, I hadn't noticed that my local build failed like this too.
+which meant I [needed some npm packages](https://gohugo.io/hugo-pipes/postcss/) installed globally.
+
+Whilst I could fix my local build like this easily enough, it was less obvious where to do this with Netlify.
+Was node preinstalled? Can I execute multiple build commands?
 
 ## If you want a job done right...
 
 I decided to take control of the build pipeline myself. Who knows what future dependencies I might want.
 If I was going to have to learn some platform-specific toml configuration, I'd rather do it with something where I knew I wouldn't hit a brick wall.
 
-So I built the site in a [circleci](https://circleci.com/) pipeline and deployed to GitHub pages. I like circleci because you can use docker images for each step, unlike e.g. travis.
+So I built the site in a [circleci](https://circleci.com/) pipeline and deployed to GitHub pages. I like circleci because you can use docker images for each job, unlike e.g. travis, which can save some time installing dependencies.
 
 After following some [instructions](https://circleci.com/blog/deploying-documentation-to-github-pages-with-continuous-integration/) the circleci job pushing to GitHub pages announced:
 

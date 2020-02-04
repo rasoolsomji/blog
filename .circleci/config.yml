@@ -42,10 +42,10 @@ jobs:
       - image: cibuilds/hugo:latest
     steps:
       - attach_workspace:
-          at: _build
+          at: ./public
       - run:
           name: test HTML files
-          command: htmlproofer _build --allow-hash-href --check-html
+          command: htmlproofer ./public --allow-hash-href --check-html
   # Job to deploy to Github pages
   deploy:
     docker:

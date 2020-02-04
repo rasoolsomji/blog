@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://sambriggs.dev/posts/building-this-site/</loc>
-    <lastmod>2020-02-03T14:59:18+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://sambriggs.dev/tags/hugo/</loc>
     <lastmod>2020-02-03T14:59:18+00:00</lastmod>
   </url>
@@ -29,6 +24,11 @@
   
   <url>
     <loc>https://sambriggs.dev/tags/</loc>
+    <lastmod>2020-02-03T14:59:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sambriggs.dev/posts/the-birth-of-a-blog/</loc>
     <lastmod>2020-02-03T14:59:18+00:00</lastmod>
   </url>
   

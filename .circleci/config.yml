@@ -56,6 +56,12 @@ jobs:
       - attach_workspace:
           at: _build
       - run:
+          name: Install tree
+          command: sudo apt-get update && sudo apt-get install tree
+      - run:
+          name: Run tree
+          command: tree _build
+      - run:
           name: test HTML files
           command: htmlproofer _build --allow-hash-href --check-html
   # Job to deploy to Github pages

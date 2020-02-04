@@ -45,9 +45,7 @@ jobs:
           at: _build
       - run:
           name: test HTML files
-          command: |
-            htmlproofer _build --allow-hash-href --check-html \
-            --empty-alt-ignore --disable-external
+          command: htmlproofer _build --allow-hash-href --check-html
   # Job to deploy to Github pages
   deploy:
     docker:

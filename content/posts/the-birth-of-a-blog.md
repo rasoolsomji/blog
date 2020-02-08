@@ -7,11 +7,11 @@ draft: false
 tags: ["hugo","web"]
 ---
 
-# Introduction
+## Introduction
 
 This post is about how I set up this site!
 
-# Framework
+## Framework
 
 So I wanted a static site generator. You know, the trendy, 'lightning-fast', modern-web-has-gone-full-circle
 technology. Because I just want to write some text that people can read, and I can execute a build step
@@ -34,7 +34,7 @@ file dump and modify the theme files directly. Maybe this isn't always the case,
 scarred me. No theme updates?
 3. [Hugo](https://gohugo.io/) is like Jekyll, but _new_, and Go 🥰.
 
-# Setup
+## Setup
 
 Being on mac, installing Hugo with [homebrew](https://brew.sh/) is breezy:
 
@@ -48,18 +48,20 @@ enough.
 After my Jekyll experience I was delighted to find themes are tracked as git submodules. Themes are swappable
 and updates are easy! 🙌
 
-# Deployment
+## Deployment
 
-## Netlify misfire
+### Netlify misfire
 
 I had assumed I'd host for free with [netlify](https://www.netlify.com/), another trendy platform where
 Hugo is a first-class citizen.
 
 But after linking to my GitHub repo and configuring the build command I was greeted with:
 
+<!-- markdownlint-disable fenced-code-language -->
 ```
 Transformation failed: POSTCSS: failed to transform “css/main.css” (text/css): PostCSS not found; install with “npm install postcss-cli”. See https://gohugo.io/hugo-pipes/postcss/ 2
 ```
+<!-- markdownlint-enable fenced-code-language -->
 
 It turns out my chosen theme ([Call me Sam](https://themes.gohugo.io/hugo-theme-sam/) - what a narcissist!)
 depended on the [PostCSS 'Hugo Pipe'](https://gohugo.io/hugo-pipes/postcss/), which meant I needed
@@ -68,7 +70,9 @@ some npm packages installed globally.
 Whilst I could fix my local build like this easily enough, it was less obvious where to do this with
 Netlify. Was node preinstalled? Can I execute multiple build commands?
 
-## If you want a job done right...
+<!-- markdownlint-disable no-trailing-punctuation -->
+### If you want a job done right...
+<!-- markdownlint-enable no-trailing-punctuation -->
 
 I decided to take control of the build pipeline myself. Who knows what future dependencies I might want?
 If I had to learn some platform-specific configuration, I'd rather use one where I knew I couldn't
@@ -82,9 +86,11 @@ After following some [instructions](circleci-tutorial-github), the job that push
 
 [circleci-tutorial-github]: https://circleci.com/blog/deploying-documentation-to-github-pages-with-continuous-integration/
 
+<!-- markdownlint-disable fenced-code-language -->
 ```
 ERROR: The key you are authenticating with has been marked as read only.
 ```
+<!-- markdownlint-enable fenced-code-language -->
 
 Clearly I'd lost patience reading, because the 'Provisioning a deploy key' section contained it all.
 Once I created a new key and gave the public part to GitHub and the private to circleci I was in business!
@@ -94,7 +100,7 @@ You can see the pipeline config [here](blog-circleci-config) in all its glory.
 
 [blog-circleci-config]: https://github.com/briggySmalls/blog/blob/a5c9745a1134491a0369aee7bf43883e8b045b3d/.circleci/config.yml
 
-# Conclusion
+## Conclusion
 
 And there we have it! A Hugo site, built on circleci, deployed on GitHub pages. The internet has yet
 another blog.

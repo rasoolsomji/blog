@@ -4,15 +4,15 @@ jobs:
   # Job to check markdown
   lint-markdown:
     docker:
-      - image: ruby:latest
+      - image: node:latest
     steps:
       - run:
           name: Install markdownlint
-          command: gem install mdl
+          command: npm install markdownlint-cli
       - checkout
       - run:
           name: Run linter
-          command: mdl content archetypes
+          command: markdownlint content archetypes
   # Job to build the site
   build:
     docker:

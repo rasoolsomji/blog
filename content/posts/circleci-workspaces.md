@@ -1,15 +1,15 @@
 ---
-title: "Circleci Workspaces"
-description: ""
-date: 2020-02-04T08:54:10Z
+title: "CircleCI workspaces"
+description: "Correctly attaching CircleCI workspaces"
+date: 2020-02-09T23:30:00Z
 showDate: true
 draft: true
-tags: ["circleci"]
+tags: ["circle-ci"]
 ---
 
 ## The problem
 
-When I created my circleci pipeline in my [first post](/the-birth-of-a-blog.md) I came
+When I created my CircleCI pipeline in my [first post]({{< ref "the-birth-of-a-blog.md" >}}) I came
 unstuck passing the built site from one job to another as a _workspace_.
 
 This manifested in two ways, where I'd made the same mistake in two different jobs.

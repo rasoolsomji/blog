@@ -34,8 +34,8 @@ jobs:
           name: Install git submodules
           command: git submodule sync && git submodule update --init
       - run:
-          name: Install NPM
-          command: sudo apt-get update && sudo apt-get install -y npm
+          name: Install apt packages
+          command: sudo apt-get update && sudo apt-get install -y npm tree
       - run:
           name: Install node dependencies
           command: sudo npm install -g postcss-cli autoprefixer
@@ -44,7 +44,7 @@ jobs:
           command: hugo -v -D
       - run:
           name: Show build output
-          command: ls -lah ./public
+          command: tree ./public
       - persist_to_workspace:
           root: .
           paths: public
@@ -54,12 +54,10 @@ jobs:
       - image: cibuilds/hugo:latest
     steps:
       - attach_workspace:
-          at: _build
+          at: .
       - run:
           name: test HTML files
-          command: |
-            htmlproofer _build --allow-hash-href --check-html \
-            --empty-alt-ignore --disable-external
+          command: htmlproofer ./public --allow-hash-href --check-html
   # Job to deploy to Github pages
   deploy:
     docker:

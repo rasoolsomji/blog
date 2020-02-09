@@ -57,11 +57,11 @@ Hugo is a first-class citizen.
 
 But after linking to my GitHub repo and configuring the build command I was greeted with:
 
-<!-- markdownlint-disable fenced-code-language -->
+<!-- markdownlint-disable fenced-code-language line-length -->
 ```
 Transformation failed: POSTCSS: failed to transform “css/main.css” (text/css): PostCSS not found; install with “npm install postcss-cli”. See https://gohugo.io/hugo-pipes/postcss/ 2
 ```
-<!-- markdownlint-enable fenced-code-language -->
+<!-- markdownlint-enable fenced-code-language line-length -->
 
 It turns out my chosen theme ([Call me Sam](https://themes.gohugo.io/hugo-theme-sam/) - what a narcissist!)
 depended on the [PostCSS 'Hugo Pipe'](https://gohugo.io/hugo-pipes/postcss/), which meant I needed

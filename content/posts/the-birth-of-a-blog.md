@@ -22,7 +22,7 @@ without hurting myself.
 Knowing I'm the kind of person who often lets perfect get the better of me, I didn't want to get stuck
 at step one _this_ time.
 
-I took the top three static site frameworks from [stackshare](stackshare-generators): Jekyll, Gatsby,
+I took the top three static site frameworks from [stackshare][stackshare-generators]: Jekyll, Gatsby,
 Hugo. And whittled them down through opinionated first-impressions and prejudices:
 
 [stackshare-generators]: https://stackshare.io/static-site-generators
@@ -82,7 +82,7 @@ So I built the site in a [circleci](https://circleci.com/) pipeline and deployed
 like circleci because you can use docker images for each job, unlike e.g. travis, which can save some
 time installing dependencies.
 
-After following some [instructions](circleci-tutorial-github), the job that pushes to GitHub pages announced:
+After following some [instructions][circleci-tutorial-github], the job that pushes to GitHub pages announced:
 
 [circleci-tutorial-github]: https://circleci.com/blog/deploying-documentation-to-github-pages-with-continuous-integration/
 
@@ -96,7 +96,7 @@ Clearly I'd lost patience reading, because the 'Provisioning a deploy key' secti
 Once I created a new key and gave the public part to GitHub and the private to circleci I was in business!
 Seriously, take your time with that article, it has everything you need.
 
-You can see the pipeline config [here](blog-circleci-config) in all its glory.
+You can see the pipeline config [here][blog-circleci-config] in all its glory.
 
 [blog-circleci-config]: https://github.com/briggySmalls/blog/blob/a5c9745a1134491a0369aee7bf43883e8b045b3d/.circleci/config.yml
 

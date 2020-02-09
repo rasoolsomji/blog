@@ -54,7 +54,7 @@ jobs:
       - image: cibuilds/hugo:latest
     steps:
       - attach_workspace:
-          at: ./public
+          at: .
       - run:
           name: test HTML files
           command: htmlproofer ./public --allow-hash-href --check-html

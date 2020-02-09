@@ -78,8 +78,8 @@ I decided to take control of the build pipeline myself. Who knows what future de
 If I had to learn some platform-specific configuration, I'd rather use one where I knew I couldn't
 hit a brick wall.
 
-So I built the site in a [circleci](https://circleci.com/) pipeline and deployed to GitHub pages. I
-like circleci because you can use docker images for each job, unlike e.g. travis, which can save some
+So I built the site in a [CircleCI](https://circleci.com/) pipeline and deployed to GitHub pages. I
+like CircleCI because you can use docker images for each job, unlike e.g. travis, which can save some
 time installing dependencies.
 
 After following some [instructions][circleci-tutorial-github], the job that pushes to GitHub pages announced:
@@ -93,7 +93,7 @@ ERROR: The key you are authenticating with has been marked as read only.
 <!-- markdownlint-enable fenced-code-language -->
 
 Clearly I'd lost patience reading, because the 'Provisioning a deploy key' section contained it all.
-Once I created a new key and gave the public part to GitHub and the private to circleci I was in business!
+Once I created a new key and gave the public part to GitHub and the private to CircleCI I was in business!
 Seriously, take your time with that article, it has everything you need.
 
 You can see the pipeline config [here][blog-circleci-config] in all its glory.
@@ -102,5 +102,5 @@ You can see the pipeline config [here][blog-circleci-config] in all its glory.
 
 ## Conclusion
 
-And there we have it! A Hugo site, built on circleci, deployed on GitHub pages. The internet has yet
+And there we have it! A Hugo site, built on CircleCI, deployed on GitHub pages. The internet has yet
 another blog.

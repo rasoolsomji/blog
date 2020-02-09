@@ -16,7 +16,9 @@ This manifested in two ways, where I'd made the same mistake in two different jo
 
 ## Deployment issues
 
-The deploy job appeared to work correctly, but when I navigated to the site I was greeted with a 404 error.
+The deploy job appeared to work correctly, but when I navigated to the site I was greeted with a 404 error:
+
+![GitHub pages 404](/github-pages-404.jpg)
 
 ## HTML-proofer internal link checks
 

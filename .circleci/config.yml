@@ -107,7 +107,7 @@ jobs:
           command: touch ./public/.nojekyll
       - run:
           name: Deploy to gh-pages branch
-          command: gh-pages --dist ./public --message "[ci skip] Deploy updates"
+          command: gh-pages --dotfiles --dist ./public --message "[ci skip] Deploy updates"
 
 workflows:
   version: 2

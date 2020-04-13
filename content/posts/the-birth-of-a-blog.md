@@ -3,7 +3,6 @@ title: "The birth of a blog"
 description: "How I built and deployed this website, including stack-selection and pipeline pitfalls!"
 date: 2020-02-03T14:59:18Z
 showDate: true
-draft: false
 tags: ["hugo","web"]
 ---
 

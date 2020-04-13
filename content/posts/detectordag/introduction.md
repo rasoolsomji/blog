@@ -3,7 +3,7 @@ title: "Introduction"
 date: 2020-04-13T10:33:44+01:00
 showDate: true
 draft: true
-tags: [""]
+tags: ["detectordag"]
 ---
 
 My latest project was inspired when my best friend's mum came to me with a problem:
@@ -18,14 +18,14 @@ They worked by plugging into a mains socket, acting as a passthrough for electri
 but loaded with a SIM card to text predefined numbers if the power failed.
 However I was pretty surprised at how pricey they were (£125 and £150), given they looked a bit dated.
 
-[^2]: [isocket](https://www.isocket.eu/) and [powertxt](https://www.tekview-solutions.com/powertxt.php)
+[^2]: [isocket](https://www.isocket.eu/) and [powertxt](https://www.tekview-solutions.com/powertxt.php).
 
 The problem was further defined:
 
 > We have two circuit rings in our house, and during the previous powercut one circuit stayed up and the other tripped.
 I don't really want to spend ~£300 because we need two of them.
 
-At this point I could feel myself itching to solve this with a characteristically overengineered solution.
+At this point I could feel myself itching to solve this with a signature overengineered solution.
 With images of raspberry pi's, cloud databases, email notifications, flying through my head, I tried to find a _quick_ solution:
 
 - Maybe Alderney electricity board have an API for announcing power failures[^3]? ❌
@@ -39,5 +39,5 @@ Who was I kidding, by this point my weakness for overcomplicating life had set i
 >
 > Fever Pitch - Nick Hornby
 
-[^3]: Honestly, if you look at their [power failure advice](http://www.alderney-elec.com/html/failure.php) you'd realise how funny this question is
-[^4]: [inductive loads not suitable for UPSs](https://community.spiceworks.com/topic/610697-can-someone-help-me-find-a-ups-battery-backup-that-will-power-this-fridge)
+[^3]: Honestly, if you look at their [power failure advice](http://www.alderney-elec.com/html/failure.php) you'd realise how funny this question is.
+[^4]: [inductive loads not suitable for UPSs.](https://community.spiceworks.com/topic/610697-can-someone-help-me-find-a-ups-battery-backup-that-will-power-this-fridge)

@@ -3,6 +3,7 @@ title: "Concepts"
 date: 2020-04-13T11:41:03+01:00
 showDate: true
 series: ["detector-dag"]
+series_weight: 2
 ---
 
 I set to work designing a system for monitoring power remotely, and came up with a few iterations.

@@ -2,7 +2,6 @@
 title: "Concepts"
 date: 2020-04-13T11:41:03+01:00
 showDate: true
-draft: true
 tags: ["detectordag"]
 ---
 

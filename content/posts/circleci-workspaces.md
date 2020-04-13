@@ -3,7 +3,6 @@ title: "CircleCI workspaces"
 description: "Correctly attaching CircleCI workspaces"
 date: 2020-02-09T23:30:00Z
 showDate: true
-draft: true
 tags: ["circle-ci"]
 ---
 

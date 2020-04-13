@@ -17,13 +17,13 @@
     <hr />
     {{ range .Params.series }}
     <aside role="complementary">
-        <span>
+        <div>
             Hey! This post is part of the
             <a href='{{ ($.Site.GetPage "series" .).RelPermalink }}'>
                 {{ . }}
             </a> series.
             If this post is missing some context you could head there to get caught up.
-        </span>
+        </div>
     </aside>
     <hr />
     {{ end }}

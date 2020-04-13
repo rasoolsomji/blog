@@ -18,7 +18,7 @@ All of my concepts revolved around a few assumptions:
 
 My initial ideas revolved around connecting a Raspberry Pi to the house's WiFi network:
 
-{{< svg "_gen/archie/im-alive-context-device.svg" >}}
+![iteration-1](/_gen/archie/im-alive-context-device.png)
 
 - Devices are connected to home WiFi network
 - Devices send 'I'm alive' messages to the server
@@ -42,13 +42,13 @@ a reasonably-priced, uninterruptable power supply shield designed for the Pi Zer
 It includes a digital signal connected to a GPIO pin to indicate power status, as well as extra
 features such as battery capacity/voltage.
 
+![iteration-2-device](/_gen/archie/im-dead-context-device.png)
+
 Ok, so now the Pi can send a 'power lost' message. But if there's been a power cut the router is probably
 down too! Fine, lets throw in a [small UPS](https://www.amazon.co.uk/gp/product/B075QZQSS1) for the
 router too.
 
-{{< svg "_gen/archie/im-dead-context.svg" >}}
-
-{{< svg "_gen/archie/im-dead-context-device.svg" >}}
+![iteration-1](/_gen/archie/im-dead-context.png)
 
 - Devices are connected to home WiFi network
 - During a power cut the UPSs for the device and router keep both running
@@ -72,7 +72,7 @@ you'll realise that I've just reinvented the products discussed there for a bit 
 
 Well, those guys are running a business on this model, maybe they know what they're doing?
 
-{{< svg "_gen/archie/independent-context-device.svg" >}}
+![iteration-3](/_gen/archie/independent-context-device.png)
 
 - Devices are connected to the internet using a USB dongle loaded with a data SIM
 - During a power cut the UPSs for the devices keep them running

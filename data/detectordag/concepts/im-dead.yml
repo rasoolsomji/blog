@@ -1,5 +1,7 @@
 config:
   writer: graphviz
+  footer: |
+    rankdir=LR;
 model:
   elements:
     - name: user

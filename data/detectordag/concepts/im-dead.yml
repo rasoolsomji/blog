@@ -1,0 +1,36 @@
+config:
+  writer: graphviz
+model:
+  elements:
+    - name: user
+      kind: actor
+    - name: plug
+    - name: router
+    - name: UPS
+    - name: detector-dag
+      children:
+        - name: device
+          children:
+            - pi
+            - ups
+          associations:
+            - source: ups
+              destination: pi
+              tags: [power, status]
+        - server
+      associations:
+        - source: device/pi
+          destination: server
+          tags: [I'm dead]
+  associations:
+    - source: plug
+      destination: detector-dag/device/ups
+      tags: [power]
+    - source: router
+      destination: detector-dag/device/pi
+      tags: [connectivity]
+    - source: detector-dag/server
+      destination: user
+      tags: [email]
+    - source: UPS
+      destination: router

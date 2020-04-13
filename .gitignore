@@ -2,3 +2,5 @@
 public/
 # Ignore built resources
 resources/_gen
+# Ignore build static files
+static/_gen

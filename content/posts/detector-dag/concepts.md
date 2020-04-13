@@ -2,20 +2,20 @@
 title: "Concepts"
 date: 2020-04-13T11:41:03+01:00
 showDate: true
-tags: ["detectordag"]
+series: ["detector-dag"]
 ---
 
 I set to work designing a system for monitoring power remotely, and came up with a few iterations.
 
 All of my concepts revolved around a few assumptions:
 
-- A device would be a cheap Raspberry Pi Zero
+- A device would be a cheap [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/)
 - There would be a server that could receive staus updates from multiple devices
 - The server would email users in the case of a power failure
 
 ## Iteration 1: I'm alive
 
-My initial ideas revolved around connecting a Raspberry Pi to the house's WiFi network:
+My initial ideas revolved around connecting the Raspberry Pi to the house's WiFi network:
 
 ![iteration-1](/_gen/archie/im-alive-context-device.png)
 

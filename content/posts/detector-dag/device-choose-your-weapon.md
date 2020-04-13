@@ -2,8 +2,7 @@
 title: "Device - Choose your weapon(s)"
 date: 2020-04-13T18:48:44+01:00
 showDate: true
-draft: true
-tags: ["detectordag"]
+series: ["detector-dag"]
 ---
 
 With a high-level plan sketched out, it was time to do some 'part selection'.

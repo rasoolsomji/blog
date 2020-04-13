@@ -103,6 +103,9 @@ jobs:
           name: Add CNAME record
           command: echo 'sambriggs.dev' >> ./public/CNAME
       - run:
+          name: Disable jekyll processing
+          command: touch ./public/.nojekyll
+      - run:
           name: Deploy to gh-pages branch
           command: gh-pages --dist ./public --message "[ci skip] Deploy updates"
 

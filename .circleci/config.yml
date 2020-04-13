@@ -124,3 +124,5 @@ workflows:
               only: master
           requires:
             - build
+            - lint-markdown
+            - test-html

@@ -32,12 +32,11 @@
     </article>
     <aside>
         <div>
-
+            {{ with .Prev }}<a href="{{ .RelPermalink }} ">← {{ .Title }}</a>{{end}}
         </div>
         <div>
-
+            {{ with .Next }}<a href="{{ .RelPermalink }} ">{{ .Title }} →</a>{{end}}
         </div>
-        {{ .PrevInSection }}
     </aside>
 </div>
 {{ end }}

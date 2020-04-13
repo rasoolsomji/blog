@@ -41,7 +41,7 @@ jobs:
           command: sudo npm install -g postcss-cli autoprefixer
       - run:
           name: Build with Hugo
-          command: hugo -v -D
+          command: hugo -v
       - run:
           name: Show build output
           command: tree ./public

@@ -52,5 +52,5 @@ Sadly the AWS IoT Device SDK only came in Embedded C, Java, Javascript, and Pyth
 and my homebrew hack project, Python was the only answer.
 
 [^1]: Not that my simplistic use case had any call for this
-[^2]: I am aware of [PiWheels]("https://www.piwheels.org/"), but some docker builds, alpine for
+[^2]: I am aware of [PiWheels](https://www.piwheels.org/), but some docker builds, alpine for
 example, can't use them.

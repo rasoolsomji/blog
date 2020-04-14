@@ -2,7 +2,8 @@
 title: "Introduction"
 date: 2020-04-13T10:33:44+01:00
 showDate: true
-tags: ["detectordag"]
+series: ["detector-dag"]
+series_weight: 1
 ---
 
 My latest project was inspired when my best friend's mum came to me with a problem:

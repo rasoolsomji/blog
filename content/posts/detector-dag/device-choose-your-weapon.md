@@ -2,8 +2,8 @@
 title: "Device - Choose your weapon(s)"
 date: 2020-04-13T18:48:44+01:00
 showDate: true
-draft: true
-tags: ["detectordag"]
+series: ["detector-dag"]
+series_weight: 3
 ---
 
 With a high-level plan sketched out, it was time to do some 'part selection'.
@@ -52,5 +52,5 @@ Sadly the AWS IoT Device SDK only came in Embedded C, Java, Javascript, and Pyth
 and my homebrew hack project, Python was the only answer.
 
 [^1]: Not that my simplistic use case had any call for this
-[^2]: I am aware of [PiWheels]("https://www.piwheels.org/simple"), but some docker builds, alpine for
+[^2]: I am aware of [PiWheels](https://www.piwheels.org/), but some docker builds, alpine for
 example, can't use them.

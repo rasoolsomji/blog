@@ -70,7 +70,7 @@ and relying that they'd be connected for these rare, important events.
 
 ## Iteration 3: I'm independent
 
-This iteration isn't so clever. If you've read the [Introduction]({{< ref "introduction.md" >}})
+This iteration isn't so clever. If you've read the [Introduction]({{< relref "introduction.md" >}})
 you'll realise that I've just reinvented the products discussed there for a bit less money.
 
 Well, those guys are running a business on this model, maybe they know what they're doing?

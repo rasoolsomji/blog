@@ -63,7 +63,7 @@ Transformation failed: POSTCSS: failed to transform “css/main.css” (text/css
 <!-- markdownlint-enable fenced-code-language line-length -->
 
 It turns out my chosen theme ([Call me Sam](https://themes.gohugo.io/hugo-theme-sam/) - what a narcissist!)
-depended on the [PostCSS 'Hugo Pipe'](https://gohugo.io/hugo-pipes/postcss/), which meant I needed
+depended on the [PostCSS Hugo Pipe](https://gohugo.io/hugo-pipes/postcss/), which meant I needed
 some npm packages installed globally.
 
 Whilst I could fix my local build like this easily enough, it was less obvious where to do this with

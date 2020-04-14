@@ -62,7 +62,7 @@ My concerns with _this_ design were:
 - Just because the router is powered, will the local area's internet still be up during a powercut?
 Initial research suggested it _would_
 (internet providers would probably have their own generators).
-However my use case was [_Alderney_](https://en.wikipedia.org/wiki/Alderney)
+However my use case was [Alderney](https://en.wikipedia.org/wiki/Alderney)
 where normal assumptions about infrastructure may not hold true...
 - The system still depends on a WiFi connection between the Pis and the router.
 I just felt superstious about leaving these devices for long periods of time, unattended,

@@ -36,10 +36,10 @@
     <hr />
     <aside>
         <div>
-            {{ with .Prev }}<a href="{{ .RelPermalink }} ">← {{ .Title }}</a>{{end}}
+            {{ with .PrevInSection }}<a href="{{ .RelPermalink }} ">← {{ .Title }}</a>{{end}}
         </div>
         <div>
-            {{ with .Next }}<a href="{{ .RelPermalink }} ">{{ .Title }} →</a>{{end}}
+            {{ with .NextInSection }}<a href="{{ .RelPermalink }} ">{{ .Title }} →</a>{{end}}
         </div>
     </aside>
 </div>

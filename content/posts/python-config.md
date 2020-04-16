@@ -7,7 +7,7 @@ tags: ["python","environs", "configuration"]
 
 ## My desire
 
-Application configuration, one of the 12 tenets of the [12 factor app][12-factor-config][^1]. Such a
+Application configuration, one of the tenets of the [12 factor app][12-factor-config][^1]. Such a
 reoccurring and important need that it deserves a reusable elegant solution. This blog post assumes
 you've already drunk the Kool-Aid. If not perhaps follow the link before proceeding, they'll do a better
 job than I in convincing you.
@@ -37,7 +37,9 @@ So enter Python. Let's say you've been prototyping some sort of client that make
 class Client:
     def configure():
         # Some preamble ...
-        self._aws.configureEndpoint("some-account.aws.com", 8883)
+        self._aws.configureEndpoint(
+            "some-account.aws.com",
+            8883)
 ```
 
 You're a good citizen, you recognise that you should use environment variables to configure those parameters.

@@ -2,6 +2,7 @@
 title: "Device - Choose your weapon(s)"
 date: 2020-04-13T18:48:44+01:00
 showDate: true
+draft: true
 series: ["detector-dag"]
 series_weight: 3
 ---

@@ -18,6 +18,7 @@ googleAnalytics = "UA-157531859-1"
     # Metadata for Open Graph and Twitter
     description = "The software blog of Sam Briggs, just another nerd."
     title = "Sam Briggs"
+    customCSS = ["css/custom.css"]
 
 [[params.mainMenu]]
     link = "/about"

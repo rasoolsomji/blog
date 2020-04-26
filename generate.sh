@@ -15,3 +15,6 @@ archie generate context --scope detector-dag/device "$DATA_DIR/detectordag/conce
 
 # Independent
 archie generate context --scope detector-dag/device "$DATA_DIR/detectordag/concepts/independent.yml" | dot -Tpng > "$STATIC_GEN_DIR/independent-context-device.png"
+
+# Device source
+cat "$DATA_DIR/detectordag/device-source/database.plantuml" | plantuml -p -tpng > "$STATIC_GEN_DIR/database.png"

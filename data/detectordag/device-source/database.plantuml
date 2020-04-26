@@ -1,0 +1,26 @@
+@startuml
+
+left to right direction
+skinparam shadowing false
+
+database database {
+    class account
+    class device
+}
+
+rectangle iot as "AWS IoT" {
+    class thing
+}
+
+account "1" --- "many" device
+device "1" -- "1" thing
+
+account : email
+account : id
+
+device : id
+device : power_status
+
+thing : name
+
+@enduml

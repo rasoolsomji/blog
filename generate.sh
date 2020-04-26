@@ -18,3 +18,4 @@ archie generate context --scope detector-dag/device "$DATA_DIR/detectordag/conce
 
 # Device source
 cat "$DATA_DIR/detectordag/device-source/database.plantuml" | plantuml -p -tpng > "$STATIC_GEN_DIR/database.png"
+cat "$DATA_DIR/detectordag/device-source/shadow.plantuml" | plantuml -p -tpng > "$STATIC_GEN_DIR/shadow.png"

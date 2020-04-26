@@ -5,23 +5,22 @@ skinparam shadowing false
 
 database database {
     class account
-    class device
 }
 
 rectangle iot as "AWS IoT" {
     class thing
+    class shadow
 }
 
-account "1" --- "many" device
-device "1" -- "1" thing
+account "1" --- "many" thing
+thing "1" -- "1" shadow
 
-account : id
 account : email
-
-device : id
-device : account-id
-device : power-status
+account : id
 
 thing : name
+thing : account-id
+
+shadow : power-status
 
 @enduml

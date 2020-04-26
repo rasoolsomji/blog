@@ -57,9 +57,6 @@ and see them arrive. Now to actually move to _my_ solution.
 
 ## Device shadow
 
-It's sometimes not worth telling a story chronologically. What I'll tell you is I spent a fair bit of
-time reinventing the wheel on this project.
-
 I knew I wanted to:
 
 - __Associate__ one or more device with a single user account
@@ -68,4 +65,25 @@ I knew I wanted to:
 - Have some method of 'checking' the __most recent status__
 
 The emphasised parts stood out to me as application 'state'. And when I hear 'state' and I think database.
+I ended up implementing something like this:
 
+{{< figure alt=database-schema src=/_gen/database.png >}}
+
+However it proved to be a pain maintaining an association between an AWS IoT 'thing' and its corresponding
+`device` database entry. I made the 'thing' name the same as the device's `id` but that made creating
+new devices a bit of dance. Anyway, when you think about it, AWS maintatining a 'thing' for me really
+_is_ a database entry of sorts. It all felt a bit redundant.
+
+Enter the AWS IoT [Device Shadow Service]. This service is designed for 'telemetry' applications like
+mine - you have a device that is reports its state to the cloud for other services to use.
+
+[Device Shadow Service]: https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-shadows.html
+
+{{< figure alt=shadow-schema src=/_gen/shadow.png >}}
+
+AWS IoT maintains the correspondence between a 'thing' and its shadow for me, relieving me of the issue
+I'd faced. The shadow is designed to cache the device's reported state `power-status` along with the time
+it was updated.
+
+The correspondence between an account and its many devices could have been a blocker, but AWS IoT allows
+you to store 'attributes' on a thing, which I used to store the associated `account-id`

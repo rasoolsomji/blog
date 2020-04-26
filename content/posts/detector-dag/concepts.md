@@ -47,8 +47,8 @@ features such as allowing the Pi to interrogate battery capacity/voltage.
 {{< figure alt=iteration-2-device src=/_gen/im-dead-context-device.png >}}
 
 Ok, so now the Pi can send a "power lost" message. But if there's been a power cut the router is probably
-down too! Fine, lets throw in a [small UPS](https://www.amazon.co.uk/GM312-Uninterrupted-11-13Vdc-Wireless-Peripherals/dp/B06XSZVJ6Q)
-for the router too.
+down too! Fine, lets throw in a [small UPS](https://www.amazon.co.uk/gp/product/B075QZQSS1) for the
+router too.
 
 {{< figure alt=iteration-1 src=/_gen/im-dead-context.png >}}
 

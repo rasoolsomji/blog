@@ -12,11 +12,13 @@ I connected a Raspberry Pi to the [UPSLite](https://www.aliexpress.com/item/3295
 identified in the [concepts]({{< ref "concepts.md" >}}) blog post. Right out of the box I could switch
 off power and the Pi would stay alive!
 
-// TODO: Insert picture of UPSLite
+![UPSLite schematic](/upslite-and-pi.jpg)
 
-I moved on to _detecting_ the power state changes with the Pi: I wanted to send MMQT messages when these
-events occurred. Documentation on the UPSLite was thin on the ground, but I'd found a tweet from the
-manufacturer that indicated I could detect this on the Pi's GPIO7:
+I moved on to _detecting_ the power state changes with the Pi: I wanted to send MMQT messages
+with my [AWS IoT client]({{< ref "./aws-iot.md" >}}) when these events occurred.
+
+Documentation on the UPSLite was thin on the ground, but I'd found a tweet
+from the manufacturer that indicated I could detect this on the Pi's GPIO7:
 
 {{< tweet 1069568475683647488 >}}
 
@@ -66,9 +68,11 @@ Finally, I found a [translated manual][translated-manual] that revealed my error
 (BCM number) detects the high level, when pulled low, enabling the weld shorting function requires two
 back of the UPS disc, as shown below in detail.
 
-// TODO: insert image
+![UPSLite solder pads](/upslite-pads.png)
 
 I needed to short the two solder pads on the back of the board to have the pogo pin carry the power
 status signal! If my electronics knowledge had been better this is actually obvious from the schematic:
 
-// TODO: insert schematic
+![UPSLite schematic](/upslite-schematic.png)
+
+...I'm telling you, I felt like a right fool.

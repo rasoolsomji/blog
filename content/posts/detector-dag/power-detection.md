@@ -23,7 +23,7 @@ from the manufacturer that indicated I could detect this on the Pi's GPIO7:
 
 I selected the higher-level [gpiozero] python library over [RPi.GPIO][rpi-gpio]. It appears to be the
 [recommended library][gpiozero-recommended] these days, and critically for me, it has a simple edge detection
-API. This allowed me to declaritively assign callbacks to be executed when an input pin changes
+API. This allowed me to declaratively assign callbacks to be executed when an input pin changes
 value - tidy.
 
 ```python

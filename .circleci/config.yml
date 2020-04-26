@@ -21,7 +21,7 @@ jobs:
     steps:
       - run:
           name: Install graphviz
-          command: sudo apt-get update && sudo apt-get install -y graphviz
+          command: sudo apt-get update && sudo apt-get install -y graphviz plantuml
       - run:
           name: Install archie
           command: go get github.com/briggysmalls/archie/cli/archie

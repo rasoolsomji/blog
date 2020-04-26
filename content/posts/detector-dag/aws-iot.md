@@ -23,8 +23,10 @@ and simply.
 
 ## AWS IoT
 
-[AWS IoT](https://aws.amazon.com/iot/) is a PaaS offering for getting connected 'things' talking to
-the cloud (specifically, _Amazon's_ cloud) using the ubiquitous [MQTT](https://mqtt.org/) protocol.
+[AWS IoT](https://aws.amazon.com/iot/) is a [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service)
+offering for getting connected 'things' talking to the cloud (specifically, _Amazon's_ cloud) using
+the ubiquitous [MQTT](https://mqtt.org/) protocol.
+
 I had initally thought might try out RabbitMQ and the more secure, and feature-rich [AMQP](https://www.amqp.org/),
 protocol, but this seemed too handy to turn down. Leave some lessons for the future, eh?
 

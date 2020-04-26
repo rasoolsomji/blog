@@ -1,10 +1,41 @@
 version: 2
 
 jobs:
+  # Job to check markdown
+  lint-markdown:
+    docker:
+      - image: node:latest
+    steps:
+      - run:
+          name: Install markdownlint
+          command: npm install -g markdownlint-cli
+      - checkout
+      - run:
+          name: Run linter
+          command: markdownlint content archetypes
+  # Job to generate content
+  generate:
+    docker:
+      - image: circleci/golang:1.14
+    working_directory: ~/hugo
+    steps:
+      - run:
+          name: Install graphviz
+          command: sudo apt-get update && sudo apt-get install -y graphviz plantuml
+      - run:
+          name: Install archie
+          command: go get github.com/briggysmalls/archie/cli/archie
+      - checkout
+      - run:
+          name: Generate images
+          command: ./generate.sh
+      - persist_to_workspace:
+          root: ./static
+          paths: _gen
   # Job to build the site
   build:
     docker:
-      - image: cibuilds/hugo:latest
+      - image: cibuilds/hugo:0.69.0
     working_directory: ~/hugo
     steps:
       - run:
@@ -22,32 +53,33 @@ jobs:
           name: Install git submodules
           command: git submodule sync && git submodule update --init
       - run:
-          name: Install NPM
-          command: sudo apt-get update && sudo apt-get install -y npm
+          name: Install apt packages
+          command: sudo apt-get update && sudo apt-get install -y npm tree
       - run:
           name: Install node dependencies
           command: sudo npm install -g postcss-cli autoprefixer
+      # Attach generated source
+      - attach_workspace:
+          at: static
       - run:
           name: Build with Hugo
-          command: hugo -v -D
+          command: hugo -v
       - run:
           name: Show build output
-          command: ls -lah ./public
+          command: tree ./public
       - persist_to_workspace:
           root: .
           paths: public
   # Job to test the site
-  test:
+  test-html:
     docker:
-      - image: cibuilds/hugo:latest
+      - image: cibuilds/hugo:0.69.0
     steps:
       - attach_workspace:
-          at: _build
+          at: .
       - run:
           name: test HTML files
-          command: |
-            htmlproofer _build --allow-hash-href --check-html \
-            --empty-alt-ignore --disable-external
+          command: htmlproofer ./public --url-ignore /https:\/\/www\.amazon\.co\.uk/ --allow-hash-href --check-html
   # Job to deploy to Github pages
   deploy:
     docker:
@@ -71,15 +103,22 @@ jobs:
           name: Add CNAME record
           command: echo 'sambriggs.dev' >> ./public/CNAME
       - run:
+          name: Disable jekyll processing
+          command: touch ./public/.nojekyll
+      - run:
           name: Deploy to gh-pages branch
-          command: gh-pages --dist ./public --message "[ci skip] Deploy updates"
+          command: gh-pages --dotfiles --dist ./public --message "[ci skip] Deploy updates"
 
 workflows:
   version: 2
   main:
     jobs:
-      - build
-      - test:
+      - lint-markdown
+      - generate
+      - build:
+          requires:
+            - generate
+      - test-html:
           requires:
             - build
       - deploy:
@@ -88,3 +127,5 @@ workflows:
               only: master
           requires:
             - build
+            - lint-markdown
+            - test-html

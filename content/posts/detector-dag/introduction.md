@@ -48,6 +48,6 @@ a penalty rebound.
 >
 > Fever Pitch - Nick Hornby
 
-[^3]: Honestly, if you look at their [power failure advice](http://www.alderney-elec.com/html/failure.php)
-you'd realise how funny this question is.
+[^3]: Honestly, their power failure advice page (which now reports 404 error) really revealed how funny
+this question is.
 [^4]: [inductive loads not suitable for UPSs.](https://community.spiceworks.com/topic/610697-can-someone-help-me-find-a-ups-battery-backup-that-will-power-this-fridge)

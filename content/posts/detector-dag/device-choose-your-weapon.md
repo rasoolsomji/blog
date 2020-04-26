@@ -27,22 +27,6 @@ protocol, but this seemed too handy to turn down. Leave some lessons for the fut
 As we will see later, AWS IoT plugs some of the deficiencies of MQTT, such as authentication and encryption,
 which was perfect for me to quickly dabble in a complete networking project.
 
-## BalenaCloud
-
-In a [previous home project](https://github.com/briggySmalls/flipdot) I'd been frustrated that I couldn't
-debug issues on a Pi I had deployed in my grandpa's house. Given _this_ project's primary purpose was
-to be deployed to devices in an empty house I really wanted to have a solution for fleet management:
-provisioning, deploying updates, remote debugging, etc.
-
-I was curious to try [BalenaCloud](https://www.balena.io/cloud/), a service I'd encountered
-on the aforementioned project only because I'd been looking for ARM-friendly docker containers.
-Some nice features are:
-
-- SSH terminal access
-- Whole-fleet and per-device environment variables
-- Docker-push-like deployment
-- Support for multi-container applications[^1]
-
 ## ...Python 🤦‍♀️
 
 Now, don't get me wrong. Python has its uses. But I've tried playing with Pi's, Docker, and Python

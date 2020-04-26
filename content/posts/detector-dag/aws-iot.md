@@ -4,7 +4,7 @@ date: 2020-04-16T22:08:03+01:00
 showDate: true
 tags: ["blog","story"]
 series: ["detector-dag"]
-series_weight: 3
+series_weight: 4
 ---
 
 ## Introduction

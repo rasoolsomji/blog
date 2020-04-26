@@ -4,7 +4,7 @@ date: 2020-04-26T12:48:14+01:00
 showDate: true
 draft: true
 series: ["detector-dag"]
-series_weight: 5
+series_weight: 3
 tags: ["raspberry-pi"]
 ---
 

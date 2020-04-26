@@ -10,7 +10,7 @@ series_weight: 4
 ## Introduction
 
 With a high-level plan sketched out and a
-[power detecting Raspberry Pi]({{< ref "./power-detection.md" >}})
+[power detecting Raspberry Pi]({{< relref "./power-detection.md" >}})
 at my disposal it was time to stay up late and start tapping!
 
 As someone who's trying to reposition themselves as a 'backend developer', I knew I wanted to
@@ -50,7 +50,7 @@ to generate a python package with linting, testing, and dependency management re
 
 Next I found a [tutorial][balena-pi-iot] on getting a Rasperry Pi, running BalenaOS sending messages
 to AWS IoT. Which by-and-large went to plan. I smugly handled the parsing of the certificates from environment
-variables using my [config class]({{< ref "../python-config.md" >}}) pattern.
+variables using my [config class]({{< relref "../python-config.md" >}}) pattern.
 
 This got me with the equivalent of a 'hello world' IoT device, I could send MQTT messages to AWS IoT
 and see them arrive. Now to actually move to _my_ solution.

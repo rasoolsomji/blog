@@ -8,13 +8,13 @@ tags: ["raspberry-pi"]
 ---
 
 I connected a Raspberry Pi to the [UPSLite](https://www.aliexpress.com/item/32954180664.html) that I'd
-identified in the [concepts]({{< ref "concepts.md" >}}) blog post. Right out of the box I could switch
+identified in the [concepts]({{< relref "concepts.md" >}}) blog post. Right out of the box I could switch
 off power and the Pi would stay alive!
 
 ![UPSLite schematic](/upslite-and-pi.jpg)
 
 I moved on to _detecting_ the power state changes with the Pi: I wanted to send MMQT messages
-with my [AWS IoT client]({{< ref "./aws-iot.md" >}}) when these events occurred.
+with my [AWS IoT client]({{< relref "./aws-iot.md" >}}) when these events occurred.
 
 Documentation on the UPSLite was thin on the ground, but I'd found a tweet
 from the manufacturer that indicated I could detect this on the Pi's GPIO7:

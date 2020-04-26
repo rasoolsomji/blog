@@ -8,7 +8,7 @@ tags: ["circle-ci"]
 
 ## The problem
 
-When I created my CircleCI pipeline in my [first post]({{< ref "the-birth-of-a-blog.md" >}}) I came
+When I created my CircleCI pipeline in my [first post]({{< relref "the-birth-of-a-blog.md" >}}) I came
 unstuck passing the built site from one job to another as a _workspace_.
 
 This manifested in two ways, where I'd made the same mistake in two different jobs.

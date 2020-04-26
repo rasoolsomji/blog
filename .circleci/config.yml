@@ -79,7 +79,7 @@ jobs:
           at: .
       - run:
           name: test HTML files
-          command: htmlproofer ./public --allow-hash-href --check-html
+          command: htmlproofer ./public --url-ignore /https:\/\/www\.amazon\.co\.uk/ --allow-hash-href --check-html
   # Job to deploy to Github pages
   deploy:
     docker:

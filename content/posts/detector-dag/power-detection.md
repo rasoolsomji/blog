@@ -1,5 +1,5 @@
 ---
-title: "Device Hardware Hell"
+title: "Power detection"
 date: 2020-04-26T12:48:14+01:00
 showDate: true
 draft: true

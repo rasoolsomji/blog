@@ -9,8 +9,8 @@ series_weight: 3
 
 ## Introduction
 
-With a high-level plan sketched out and a couple of Raspberry Pi Zeros at my disposal it was time to
-stay up late and start tapping!
+With a high-level plan sketched out and a [power detecting Raspberry Pi]({{< ref "./device-hardware.md" >}})
+at my disposal it was time to stay up late and start tapping!
 
 As someone who's trying to reposition themselves as a 'backend developer', I knew I wanted to
 become familiar with Amazon Web Services (AWS). It might not be the answer to every solution, but it

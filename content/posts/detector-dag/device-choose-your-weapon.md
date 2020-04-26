@@ -27,7 +27,6 @@ protocol, but this seemed too handy to turn down. Leave some lessons for the fut
 As we will see later, AWS IoT plugs some of the deficiencies of MQTT, such as authentication and encryption,
 which was perfect for me to quickly dabble in a complete networking project.
 
-
 ## ...Python 🤦‍♀️
 
 Now, don't get me wrong. Python has its uses. But I've tried playing with Pi's, Docker, and Python

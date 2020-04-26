@@ -13,8 +13,8 @@ With a high-level plan sketched out and a couple of Raspberry Pi Zeros at my dis
 stay up late and start tapping!
 
 As someone who's trying to reposition themselves as a 'backend developer', I knew I wanted to
-become familiar with Amazon Web Services (AWS). It might not be the answer to every solution, but it certainly
-felt like something that should be in my toolkit.
+become familiar with Amazon Web Services (AWS). It might not be the answer to every solution, but it
+certainly felt like something that should be in my toolkit.
 
 Also, coming from an embedded background, I wasn't fussed about making a bells-and-whistles device.
 I was in this for the cloud architecture lessons, so I wanted to get this end of the project done quickly
@@ -83,8 +83,8 @@ mine - you have a device that reports its state to the cloud for other services 
 {{< figure alt=shadow-schema src=/_gen/shadow.png >}}
 
 AWS IoT maintains the correspondence between a 'thing' and its shadow for me, relieving me of the issue
-I'd faced. The shadow is designed to cache the device's reported state (`power-status`) along with the time
-it was updated.
+I'd faced. The shadow is designed to cache the device's reported state (`power-status`) along with the
+time it was updated.
 
 The correspondence between an account and its many devices could have been a blocker, but AWS IoT allows
 you to store 'attributes' on a thing, which I used to store the associated `account-id`

@@ -2,7 +2,7 @@
 title: "AWS IoT - Pi in the sky"
 date: 2020-04-16T22:08:03+01:00
 showDate: true
-tags: ["blog","story"]
+tags: ["aws-iot","raspberry-pi"]
 series: ["detector-dag"]
 series_weight: 4
 ---
